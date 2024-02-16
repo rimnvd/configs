@@ -7,7 +7,7 @@ spring:
         show_sql: true
     generate-ddl: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
   datasource:
     url: jdbc:postgresql://localhost:5432/game
     username: postgres
