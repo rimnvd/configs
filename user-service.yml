@@ -15,6 +15,13 @@ spring:
     driverClassName: org.postgresql.Driver
   main:
     allow-circular-references: true
+  flyway:
+    user: postgres
+    password: moo748
+    schemas: public
+    url: jdbc:postgresql://localhost:5432/game
+    locations: db/migration
+    baseline-on-migrate: true
 
 security:
   jwt:
