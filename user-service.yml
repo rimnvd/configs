@@ -32,9 +32,7 @@ security:
 eureka:
   client:
     service-url:
-      defaultZone:
-        # - "http://localhost:8761/eureka" # для локального запуска
-        - "http://eureka-server:8761/eureka"
+      defaultZone: http://eureka-server:8761/eureka # http://localhost:8761/eureka # для локального запуска
 
 # management:
 #   endpoints:
