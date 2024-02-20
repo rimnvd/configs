@@ -2,7 +2,8 @@ spring:
   application:
     name: item-service
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/game
+    # url: r2dbc:postgresql://localhost:5432/game
+    url: r2dbc:postgresql://postgres:5432/game
     username: postgres
     password: moo748
   # jpa:
@@ -24,4 +25,5 @@ eureka:
   client:
     service-url:
       defaultZone:
-        - "http://localhost:8761/eureka"
+        # - "http://localhost:8761/eureka" # для локального запуска
+        - "http://eureka-server:8761/eureka"
