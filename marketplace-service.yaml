@@ -10,7 +10,7 @@ spring:
       ddl-auto: none
   datasource:
     # url: jdbc:postgresql://localhost:5432/game # для локального запуска
-    url: jdbc:postgresql://postgres:5432/game
+    url: jdbc:postgresql://postgres:5432/game1
     username: postgres
     password: moo748
     driverClassName: org.postgresql.Driver
@@ -19,7 +19,7 @@ spring:
     password: moo748
     schemas: public
     # url: jdbc:postgresql://localhost:5432/game
-    url: jdbc:postgresql://postgres:5432/game
+    url: jdbc:postgresql://postgres:5432/game1
     locations: db/migration
     baseline-on-migrate: true
 
