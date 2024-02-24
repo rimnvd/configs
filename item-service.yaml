@@ -30,4 +30,4 @@ management:
         include: refresh
 
 example:
-  property: "kek"
+  property: "kek_new"
