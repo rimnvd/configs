@@ -35,8 +35,9 @@ eureka:
     service-url:
       defaultZone: http://eureka-server:8761/eureka # http://localhost:8761/eureka # для локального запуска
 
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: "*"
+# Refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
