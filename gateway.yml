@@ -20,6 +20,25 @@ spring:
           uri: lb://marketplace-service
           predicates:
             - Path=/marketplace/**
+        # Refreshes
+        - id: item-service-refresh
+          uri: lb://item-service
+          predicates:
+            - Path=/item-service-refresh
+          filters:
+            - RewritePath=/item-service-refresh, /actuator/refresh
+        # - id: user-service-refresh
+        #   uri: lb://user-service
+        #   predicates:
+        #     - Path=/user-service-refresh
+        #   filters:
+        #     - RewritePath=/user-service-refresh, /actuator/refresh
+        # - id: marketplace-service-refresh
+        #   uri: lb://marketplace-service
+        #   predicates:
+        #     - Path=/marketplace-service-refresh
+        #   filters:
+        #     - RewritePath=/marketplace-service-refresh, /actuator/refresh
 
 
 eureka:
