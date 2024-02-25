@@ -16,6 +16,10 @@ spring:
     url: jdbc:postgresql://postgres:5432/game1
     locations: db/migration
     baseline-on-migrate: true
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
 
 eureka:
   client:
