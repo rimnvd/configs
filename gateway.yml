@@ -39,7 +39,11 @@ spring:
             - Path=/marketplace-service-refresh
           filters:
             - RewritePath=/marketplace-service-refresh, /actuator/refresh
-
+        # Swagger
+        - id: item-openapi
+          uri: lb://item-service
+          predicates:
+            - Path=/item-service/v3/api-docs, /item-service/swagger-ui/**
 
 eureka:
   client:
