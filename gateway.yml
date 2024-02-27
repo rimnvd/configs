@@ -44,6 +44,10 @@ spring:
           uri: lb://item-service
           predicates:
             - Path=/item-service/v3/api-docs, /item-service/swagger-ui/**
+        - id: user-openapi
+          uri: lb://user-service
+          predicates:
+            - Path=/user-service/v3/api-docs, /user-service/swagger-ui/**
 
 eureka:
   client:
