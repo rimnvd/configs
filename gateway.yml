@@ -20,6 +20,10 @@ spring:
           uri: lb://marketplace-service
           predicates:
             - Path=/marketplace/**
+        - id: file-service
+          uri: lb://file-service
+          predicates:
+            - Path=/api/v1/hps3/file/**
         # Refreshes
         - id: item-service-refresh
           uri: lb://item-service
