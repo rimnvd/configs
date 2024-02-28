@@ -24,6 +24,10 @@ spring:
           uri: lb://file-service
           predicates:
             - Path=/api/v1/hps3/file/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
         # Refreshes
         - id: item-service-refresh
           uri: lb://item-service
